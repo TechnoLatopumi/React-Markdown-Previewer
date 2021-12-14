@@ -6,7 +6,7 @@ to use this project :
 check components section in src folders then check all the import in every component files and install all of them
 - npm install
 - npm marked
-- then check link below to install all the needed icon
+- then check the instruction from the link below to install all the needed icon
 - https://fontawesome.com/v6.0/docs/web/use-with/react/add-icons
 
 here is the preview for my project
