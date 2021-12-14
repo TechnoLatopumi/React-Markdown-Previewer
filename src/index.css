@@ -1,13 +1,185 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom properties */
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+
+  --clr-light: #fffbfe;
+  --clr-dark: #345;
+  --clr-accent: rgb(58, 43, 58);
+
+  --background: rgba(102, 71, 65, 0.685);
+
+  --fw-bold: 900;
+
+  --fs-h1: 1rem;
+
+  --bs-default: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("https://www.parkersoftware.com/wp-content/uploads/2020/10/pankaj-patel-_SgRNwAVNKw-unsplash-scaled.jpg");
+}
+
+/* Preview markup styles */
+h1 {
+  border-bottom: 0.1em solid #000;
+}
+h2 {
+  border-bottom: 0.05em solid #000;
+}
+table,
+tr,
+th,
+td {
+  border: 0.1em solid #000;
+  border-collapse: collapse;
+}
+blockquote {
+  border-left: 0.25em solid #000;
+  padding-left: 0.5em;
+}
+code,
+pre {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Sections */
+
+.editor {
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  display: grid;
+  box-shadow: var(--bs-default);
+  width: 90vw;
+  grid-template-rows: 2em minmax(min-content, 15em);
+}
+
+.previewer {
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  display: grid;
+  box-shadow: var(--bs-default);
+  width: 95vw;
+  grid-template-rows: 2em minmax(min-content, 15em);
+}
+
+footer {
+  position: fixed;
+
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+  font-style: var(--fw-bold);
+  text-align: right;
+}
+
+@media (min-width: 40em) {
+  .editor {
+    width: 80vw;
+  }
+
+  .previewer {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 60em) {
+  .editor {
+    width: 45em;
+  }
+
+  .previewer {
+    width: 50em;
+  }
+}
+
+.editor--fullscreen {
+  width: 96vw;
+  grid-template-rows: 2em 95vh;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  margin-top: 0.5em;
+  background-color: var(--clr-light);
+}
+
+.previewer--fullscreen {
+  width: 96vw;
+  grid-template-rows: 2em auto;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  margin-top: 0.5em;
+  background-color: var(--clr-light);
+}
+
+/* Section header */
+
+header {
+  display: grid;
+  grid-template-columns: 2em auto 1.5em;
+  height: 2em;
+  background: var(--clr-accent);
+  padding: 0.45em 0 0 0.5em;
+  margin: 0;
+  color: #fff;
+  border: 0.05em solid #000;
+  box-shadow: var(--bs-default);
+  z-index: 2;
+}
+
+.icon {
+  font-size: var(--fs-h1);
+}
+
+.icon-action:hover {
+  color: var(--clr-dark);
+  cursor: pointer;
+}
+
+.section-title {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* Editor / Preview */
+
+#editor {
+  background-color: rgb(46, 43, 43);
+  margin: 0;
+  padding: 0.5em;
+  border: 0.05em solid #000;
+  border-top: 0;
+  outline: 0;
+  color: green;
+}
+#preview {
+  background-color: var(--clr-light);
+  margin: 0;
+  padding: 0.5em;
+  border: 0.05em solid #000;
+  border-top: 0;
+  outline: 0;
 }
