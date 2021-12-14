@@ -7,7 +7,7 @@ check components section in src folders then check all the import in every compo
 - npm install
 - npm marked
 - then check link below to install all the needed icon
-https://fontawesome.com/v6.0/docs/web/use-with/react/add-icons
+- https://fontawesome.com/v6.0/docs/web/use-with/react/add-icons
 
 here is the preview for my project
 https://markdownpreviewer-tdp.netlify.app/
